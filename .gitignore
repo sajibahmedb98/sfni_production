@@ -2,6 +2,10 @@
 /public/build
 /public/hot
 /public/storage
+/public/index.php
+index.php
+/public/.htaccess
+.htaccess
 /storage/*.key
 /vendor
 .env

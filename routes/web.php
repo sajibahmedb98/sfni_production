@@ -47,13 +47,13 @@ Route::post('sendmessage', [LandingPageController::class, 'sendMessage'])->name(
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
-});                                                                                                                //->middleware('auth.admin')
-Route::get('editlandingpage', [AdminController::class, 'editLandingPage'])->name('admin.editLandingPage');        //->middleware('auth.admin')
-Route::post('background-img-upload', [AdminController::class, 'backgroundImgUpload']);                            //->middleware('auth.admin');
-Route::post('aboutus-img-upload', [AdminController::class, 'aboutusImgUpload']);                                  //->middleware('auth.admin')
+})->middleware('auth.admin');                                                                                                                //->middleware('auth.admin')
+Route::get('editlandingpage', [AdminController::class, 'editLandingPage'])->name('admin.editLandingPage')->middleware('auth.admin');        //->middleware('auth.admin')
+Route::post('background-img-upload', [AdminController::class, 'backgroundImgUpload'])->middleware('auth.admin');                            //->middleware('auth.admin');
+Route::post('aboutus-img-upload', [AdminController::class, 'aboutusImgUpload'])->middleware('auth.admin');                                  //->middleware('auth.admin')
 
-Route::get('message', [AdminController::class, 'message']);                                        // ->middleware('auth.admin')
-Route::get('messageseen', [AdminController::class, 'messageseen']);                                        // ->middleware('auth.admin')
+Route::get('message', [AdminController::class, 'message'])->middleware('auth.admin');                                        // ->middleware('auth.admin')
+Route::get('messageseen', [AdminController::class, 'messageseen'])->middleware('auth.admin');                                        // ->middleware('auth.admin')
 
 //----------------- End Admin pages  ---------------------//
 
