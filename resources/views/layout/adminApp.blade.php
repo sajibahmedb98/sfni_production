@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>SFNIBD Admin - Dashboard</title>
+    <link href="assets/img/favicon.png" rel="icon">
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
